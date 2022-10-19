@@ -20,6 +20,8 @@ class ImageCompressor:
         # codebook which will then be used for compression
         
         self.mean_image =(sum(train_images)/len(train_images))
+        print(" The mean image is")
+        print(self.mean_image)
         # calculate principal_componants
         
         X = (np.reshape(train_images,(len(train_images),-1)))
