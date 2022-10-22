@@ -15,6 +15,7 @@ class ImageCompressor:
         principal_components_re = (self.principal_components.T) # Nxd (n_images x n_pixels(96*96*3))
         codebook = np.concatenate((mean_image_re, principal_components_re), 0) # on top of each other
         return codebook
+        
     def train(self, train_images):
         # Given a list of training images as input, this function should learn the 
         # codebook which will then be used for compression
